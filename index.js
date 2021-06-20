@@ -1,11 +1,17 @@
+const noExpression = require('./rules/no-expression');
+
 module.exports = {
-    rules: {},
+    rules: {
+        'no-expression': noExpression
+    },
     configs: {
         recommended: {
             plugins: [
                 'assignment'
             ],
-            rules: {}
+            rules: {
+                'assignment/no-expression': 'error'
+            }
         }
     }
 };
