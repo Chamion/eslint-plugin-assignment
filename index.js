@@ -1,8 +1,10 @@
 const noExpression = require('./rules/no-expression');
+const compound = require('./rules/compound');
 
 module.exports = {
     rules: {
-        'no-expression': noExpression
+        'no-expression': noExpression,
+        'compound': compound
     },
     configs: {
         recommended: {
