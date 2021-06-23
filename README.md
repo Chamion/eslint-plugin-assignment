@@ -136,6 +136,6 @@ This rule does not enforce the use of non-compound assignment expressions (e.g. 
 
 Using assignment expressions outside statements can lead to confusing code or even bugs if the value of the expression is accidentally used. Enforcing `assignment/no-expression` solves that problem and is therefore recommended for all modern JavaScript projects.
 
-`assignment/compound` and `assignment/update` are opinionated and can be used to enforce any preference of syntax. Unless you want to prefer or ban a specific syntax don't enable these rules.
+`assignment/compound` and `assignment/increment` are opinionated and can be used to enforce any preference of syntax. Unless you want to prefer or ban a specific syntax don't enable these rules.
 
-The `recommended` configuration enabled `assignment/no-exression` and disables `assignment/compound` and `assignment/update`.
+The `recommended` configuration enabled `assignment/no-exression` and disables `assignment/compound` and `assignment/increment`.
