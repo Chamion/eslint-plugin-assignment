@@ -2,6 +2,25 @@
 
 Eslint plugin to enforce code style of reassignment and update expressions
 
+## Usage
+
+Install package.
+
+```
+npm install eslint-plugin-assignment --save-dev
+```
+
+In `.eslintrc`
+
+```
+"plugins": [
+  "assignment"
+],
+"rules": {
+  "assignment/no-expression": "error"
+}
+```
+
 ## Rules
 
 <details>
