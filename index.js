@@ -3,6 +3,8 @@ const last = (array) => array[array.length - 1];
 const isLastExpression = ({ sequence, expression }) =>
     last(sequence.expressions) === expression;
 
+const isTestExpression = ({ forStatement, expression }) => expression === forStatement.test;
+
 const isAllowed = (assignmentExpressionNode) => {
     const parent = assignmentExpressionNode.parent;
     switch (parent.type) {
@@ -17,6 +19,11 @@ const isAllowed = (assignmentExpressionNode) => {
             );
         case "UnaryExpression":
             return parent.operator === "void";
+        case "ForStatement":
+            return !isTestExpression({
+                forStatement: parent,
+                expression: assignmentExpressionNode
+            });
         default:
             return false;
     }
