@@ -10,7 +10,7 @@ const isAllowed = (assignmentExpressionNode) => {
             return true;
         case "SequenceExpression":
             return (
-                isLastExpression({
+                !isLastExpression({
                     sequence: parent,
                     expression: assignmentExpressionNode
                 }) || isAllowed(parent)
