@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-assignment",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Eslint plugin to lint use of reassignment and update expressions",
     "main": "index.js",
     "scripts": {
